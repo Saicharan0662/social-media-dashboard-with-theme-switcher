@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
 :root {
+    --primary-bright-red: hsl(356, 69%, 56%);
+    --primary-lime-green: hsl(163, 72%, 41%);
     --very-dark-blue: hsl(230, 17%, 14%);
     --white: hsl(0, 0%, 100%);
     --desaturated-blue: hsl(228, 34%, 66%);
     --gradient-start: hsl(210, 78%, 56%);
     --gradient-end: hsl(146, 68%, 55%);
+    --dark-desaturated-blue: hsl(228, 28%, 20%);
 }
 
 .App {
@@ -16,8 +19,8 @@
 }
 
 .container {
-    margin: 0 8rem;
-    padding-top: 30px;
+    margin: 0 7%;
+    padding-top: 40px;
 }
 
 header {
@@ -95,6 +98,75 @@ input:checked+.toggler {
 
 input:checked+.toggler:before {
     transform: translateX(18px);
+}
+
+/* BIG CARD */
+.current-data-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0;
+    justify-content: space-around;
+}
+
+.big-card {
+    background-color: var(--dark-desaturated-blue);
+    padding: 18px;
+    width: 250px;
+    height: 220px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    justify-content: center;
+}
+
+.big-card:hover {
+    background-color: hsl(228deg 25% 26%);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.big-card .username {
+    color: var(--desaturated-blue);
+    font-size: 14px;
+}
+
+.big-card .username span {
+    position: relative;
+    bottom: 3px;
+    left: 5px;
+}
+
+.big-card .followers-box h2 {
+    font-size: 50px;
+}
+
+.big-card .followers-box p {
+    color: var(--desaturated-blue);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    top: -14px;
+}
+
+.stats {
+    color: var(--primary-lime-green);
+    font-size: 14px;
+}
+
+.down {
+    color: var(--primary-bright-red);
+}
+
+.stats span {
+    position: relative;
+    top: 1.4px;
+    left: 2px;
 }
 
 /* Light Theme */
