@@ -1,6 +1,8 @@
 import './App.css';
 import CustomCheckbox from './components/customCheckbox/CustomCheckbox';
 import BigCard from './components/BigCard.js/BigCard';
+import SmallCard from './components/SmallCard.js/SmallCard';
+import { useState } from 'react';
 
 const bigCardData = [
 	{
@@ -41,17 +43,84 @@ const bigCardData = [
 	},
 ]
 
+const overviewData = [
+	{
+		icon: "facebook",
+		text: "Page Views",
+		count: 87,
+		stats: 3,
+		increased: true
+	},
+	{
+		icon: "facebook",
+		text: "Likes",
+		count: 52,
+		stats: 2,
+		increased: false
+	},
+	{
+		icon: "instagram",
+		text: "Likes",
+		count: 5462,
+		stats: 2257,
+		increased: true
+	},
+	{
+		icon: "instagram",
+		text: "Profile Views",
+		count: "52k",
+		stats: 1375,
+		increased: true
+	},
+	{
+		icon: "twitter",
+		text: "Retweets",
+		count: "117",
+		stats: 303,
+		increased: true
+	},
+	{
+		icon: "twitter",
+		text: "Likes",
+		count: "507",
+		stats: 553,
+		increased: true
+	},
+	{
+		icon: "youtube",
+		text: "Likes",
+		count: "107",
+		stats: 19,
+		increased: false
+	},
+	{
+		icon: "youtube",
+		text: "Total Views",
+		count: "1407",
+		stats: 12,
+		increased: false
+	},
+]
+
 function App() {
+
+	const [isChecked, setIsChecked] = useState(false)
+
 	return (
 		<div className="App">
 			<div className="container">
 				<header>
 					<div className="header-text">
-						<h3>Social Media Dashboard</h3>
+						<h2>Social Media Dashboard</h2>
 						<p>Total Followers: 23,004</p>
 					</div>
+					<span className="border"></span>
 					<div className="togglerCont">
-						<span>Dark Mode</span><CustomCheckbox />
+						<span className='label'>Dark Mode</span>
+						<CustomCheckbox
+							isChecked={isChecked}
+							setIsChecked={setIsChecked}
+						/>
 					</div>
 				</header>
 				<div className="current-data-box" >
@@ -66,6 +135,21 @@ function App() {
 								type={data.type}
 								increased={data.increased}
 								style={data.style}
+							/>
+						)
+					})}
+				</div>
+				<h2 className='overview-text'>Overview - Today</h2>
+				<div className="overview-section">
+					{overviewData.map((data, index) => {
+						return (
+							<SmallCard
+								key={index}
+								icon={data.icon}
+								text={data.text}
+								count={data.count}
+								stats={data.stats}
+								increased={data.increased}
 							/>
 						)
 					})}

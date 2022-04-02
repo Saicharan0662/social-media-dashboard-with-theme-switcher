@@ -1,11 +1,16 @@
 import React from 'react'
 
-const CustomCheckbox = () => {
+const CustomCheckbox = ({ isChecked, setIsChecked }) => {
     return (
         <span className='switch'>
-            <label htmlFor="theme-toggler"></label>
-            <input type="checkbox" name="theme-toggler" checked={false} id="theme-toggler" />
-            <span className="toggler"></span>
+            <label htmlFor="theme-toggler">
+                <input type="checkbox" name="theme-toggler"
+                    id="theme-toggler"
+                    checked={isChecked}
+                    onChange={() => setIsChecked(!isChecked)}
+                />
+                <span className="toggler"></span>
+            </label>
         </span>
     )
 }
