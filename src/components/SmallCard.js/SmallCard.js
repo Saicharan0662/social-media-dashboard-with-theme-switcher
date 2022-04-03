@@ -1,9 +1,9 @@
 import React from 'react'
 import CustomIcon from '../CustomIcon/CustomIcon'
 
-const SmallCard = ({ icon = "facebook", text = "Page Views", count = "87", stats = "3", width = "19", height = "19", increased = true }) => {
+const SmallCard = ({ icon = "facebook", text = "Page Views", count = "87", stats = "3", width = "19", height = "19", increased = true, lightMode }) => {
     return (
-        <div className='small-box'>
+        <div className={lightMode ? "small-card small-card-light" : "small-card"}>
             <div className='small-card-top'>
                 <span className='title-text'>{text}</span>
                 <CustomIcon iconName={icon} alt={icon} width={width} height={height} />

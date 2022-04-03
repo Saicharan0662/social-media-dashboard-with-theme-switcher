@@ -105,9 +105,9 @@ const overviewData = [
 function App() {
 
 	const [isChecked, setIsChecked] = useState(false)
-
+	const [lightMode, setLightMode] = useState(false)
 	return (
-		<div className="App">
+		<div className={lightMode ? "App light" : "App"}>
 			<div className="container">
 				<header>
 					<div className="header-text">
@@ -120,6 +120,8 @@ function App() {
 						<CustomCheckbox
 							isChecked={isChecked}
 							setIsChecked={setIsChecked}
+							lightMode={lightMode}
+							setLightMode={setLightMode}
 						/>
 					</div>
 				</header>
@@ -135,6 +137,7 @@ function App() {
 								type={data.type}
 								increased={data.increased}
 								style={data.style}
+								lightMode={lightMode}
 							/>
 						)
 					})}
@@ -150,6 +153,7 @@ function App() {
 								count={data.count}
 								stats={data.stats}
 								increased={data.increased}
+								lightMode={lightMode}
 							/>
 						)
 					})}

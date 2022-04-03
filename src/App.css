@@ -9,6 +9,7 @@
     --gradient-start: hsl(210, 78%, 56%);
     --gradient-end: hsl(146, 68%, 55%);
     --dark-desaturated-blue: hsl(228, 28%, 20%);
+    --light-grayish-blue: hsl(227, 47%, 96%);
 }
 
 .App {
@@ -17,6 +18,7 @@
     background-color: var(--very-dark-blue);
     font-family: 'Baloo 2', cursive;
     color: var(--white);
+    transition: all .2s ease-out;
 }
 
 .container {
@@ -98,7 +100,12 @@ input:checked+.toggler {
 }
 
 input:checked+.toggler:before {
-    transform: translateX(18px);
+    transform: translateX(20px);
+}
+
+input:checked+.toggler:hover {
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    transition: all .4s ease-in;
 }
 
 /* BIG CARD */
@@ -122,6 +129,7 @@ input:checked+.toggler:before {
     margin-bottom: 14px;
     text-align: center;
     justify-content: center;
+    transition: all .4s ease-in;
 }
 
 .big-card:hover {
@@ -177,7 +185,7 @@ input:checked+.toggler:before {
 }
 
 /* Small Box */
-.small-box {
+.small-card {
     width: 250px;
     padding: 13px 18px;
     background-color: var(--dark-desaturated-blue);
@@ -189,9 +197,10 @@ input:checked+.toggler:before {
     border-radius: 5px;
     margin-right: 14px;
     margin-bottom: 14px;
+    transition: all .4s ease-in;
 }
 
-.small-box:hover {
+.small-card:hover {
     background-color: hsl(228deg 25% 26%);
     cursor: pointer;
     transition: all .2s ease;
@@ -218,6 +227,7 @@ input:checked+.toggler:before {
 
 .count-text {
     font-size: 30px;
+    font-weight: 600;
 }
 
 .border {
@@ -227,7 +237,28 @@ input:checked+.toggler:before {
 /* Light Theme */
 .light {
     background-color: var(--white);
-    color: black
+    color: black;
+    transition: all .4s ease-in;
+}
+
+.big-card-light {
+    background-color: var(--light-grayish-blue);
+    transition: all .2s ease-in;
+}
+
+.big-card-light:hover {
+    background-color: hsl(227, 47%, 91%);
+    transition: all .2s ease;
+}
+
+.small-card-light {
+    background-color: var(--light-grayish-blue);
+    transition: all .2s ease-in;
+}
+
+.small-card-light:hover {
+    background-color: hsl(227, 47%, 91%);
+    transition: all .2s ease;
 }
 
 /* Media queries */
@@ -274,7 +305,7 @@ input:checked+.toggler:before {
         margin-right: 0;
     }
 
-    .small-box {
+    .small-card {
         width: 96%;
         margin-right: 0;
     }

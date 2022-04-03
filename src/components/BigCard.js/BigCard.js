@@ -1,9 +1,9 @@
 import React from 'react'
 import CustomIcon from '../CustomIcon/CustomIcon'
 
-const BigCard = ({ icon, username = "nathanf", followersCount = 1987, stats = 12, type = "Followers", increased = true, ...otherProps }) => {
+const BigCard = ({ icon, username = "nathanf", followersCount = 1987, stats = 12, type = "Followers", increased = true, lightMode, ...otherProps }) => {
     return (
-        <div className='big-card' {...otherProps}>
+        <div className={lightMode ? "big-card big-card-light" : "big-card"} {...otherProps}>
             <p className='username'>
                 <CustomIcon iconName={icon} alt={icon} height='16px' width='16px' />
                 <span>@{username}</span>
