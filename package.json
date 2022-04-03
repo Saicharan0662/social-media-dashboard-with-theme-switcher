@@ -2,7 +2,7 @@
   "name": "social-media-dashboard-with-theme-switcher-master",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Saicharan0662.github.io",
+  "homepage": "https://Saicharan0662.github.io/social-media-dashboard-with-theme-switcher/",
   "dependencies": {
     "cra-template": "1.1.3",
     "react": "^18.0.0",
