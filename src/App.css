@@ -99,6 +99,10 @@ input:checked+.toggler {
     background-image: linear-gradient(to right, hsl(223, 50%, 87%), hsl(223, 50%, 87%));
 }
 
+input:checked+.toggler::before {
+    background-color: var(--white);
+}
+
 input:checked+.toggler:before {
     transform: translateX(20px);
 }
