@@ -1,4 +1,4 @@
-# Frontend Mentor - NFT preview card component solution
+# Frontend Mentor - Social media dashboard with theme switcher
 
 This is a solution to the [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
