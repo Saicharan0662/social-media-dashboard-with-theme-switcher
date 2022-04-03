@@ -15,7 +15,7 @@ const icon = {
     youtube: iconYoutube
 }
 
-const CustomIcon = ({ iconName, height = "24", width = "24", alt = "altText" }) => {
+const CustomIcon = ({ iconName, height = 24, width = 24, alt = "altText" }) => {
     const name = icon[iconName]
     return (
         <img src={name} alt={alt} height={height} width={width} />
