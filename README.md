@@ -21,7 +21,7 @@ This challenge is an Junior level challenge in Frontend Mentor. It is an social 
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Saicharan0662/frontend-mentor-solutions/tree/master/interactive-pricing-component-main)
+- Solution URL: [Solution URL](https://github.com/Saicharan0662/social-media-dashboard-with-theme-switcher)
 
 ## My process
 - I started by looking at the challenge and the instructions.
